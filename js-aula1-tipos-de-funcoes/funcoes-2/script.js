@@ -77,8 +77,3 @@ const calculadora = (a, operador, b) => {
 document.write(
   `<p>O resultado da operação matematica é ${calculadora(1100, "-", 1)}.</P>`
 );
-<<<<<<< HEAD
-
-
-=======
->>>>>>> a6626ff8e18b6272d93974f581204cd51f3898db
