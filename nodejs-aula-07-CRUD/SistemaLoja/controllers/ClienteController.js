@@ -50,6 +50,25 @@ router.post("/clientes/cadastrar", (req, res) => {
         console.log("Ocorreu u erro ao cadastrar o cliente." + error)
     });
 })
+// ROTA EXCLUSÃO DE CLIENTE -  ":id" = parametro criado do cliente
+router.get("/clientes/excluir/:id", (req, res) => {
+    //Capturando o parametro da rota = req.params
+    const id = req.params.id
+    // Envinado o ID do cliente para apagar do banco de dados
+    // "destroy" = metodo para deletar
+    Cliente.destroy({
+        where : {
+            //Banco // Parametro recebido
+            id : id
+        }
+    }).then(() => {
+        // SUCESSO
+        res.redirect("/clientes")
+        // FALHA
+    }).catch(error =>{
+        console.log("Ocorreu um erro ao excluir o cliente" + error)
+    });
+});
 
 //Exportando o módulo para usa-lo em outro arquivo
 export default router;
