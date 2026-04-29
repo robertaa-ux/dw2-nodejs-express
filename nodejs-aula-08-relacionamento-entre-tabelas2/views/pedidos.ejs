@@ -59,7 +59,7 @@
                             <td><%= pedido.valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) %></td>
 
                             <td><%= pedido.cliente.nome %></td>
-                            <!-- BOTÃO DE EXCLUIR -->
+                            <!-- BOTÃO DE EX'CLUIR -->
                             <td>
                                 <a onclick="return confirm('Deseja excluir o pedido?')" 
                                 href="/pedidos/excluir/<%= pedido.id %>" class="btn btn-danger">
